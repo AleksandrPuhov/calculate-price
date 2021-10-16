@@ -1,0 +1,12 @@
+<ul *ngFor="let tariff of tariffList" class="list">
+  <li class="list-item">
+    <p class="list-item__name">{{ tariff.tarifname }}:</p>
+
+    <p class="list-item__price" *ngIf="tariff.price > 0; else unset">
+      {{ tariff.price }} &#8381;
+    </p>
+    <ng-template #unset>
+      <p class="list-item__price">Не доступно</p>
+    </ng-template>
+  </li>
+</ul>

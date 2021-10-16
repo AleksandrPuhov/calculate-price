@@ -1,0 +1,37 @@
+<form class="form" [formGroup]="inputForm" (ngSubmit)="onSubmit()">
+  <div class="form-field">
+    <label class="form-field__label" for="distance-input"
+      >Количество километров
+    </label>
+    <input
+      class="form-field__input"
+      id="distance-input"
+      type="text"
+      formControlName="distance"
+      required
+    />
+  </div>
+  <div class="form-field">
+    <label class="form-field__label" for="age-input">Возраст </label>
+    <input
+      class="form-field__input"
+      id="age-input"
+      type="text"
+      formControlName="age"
+      required
+    />
+  </div>
+  <div class="form-field">
+    <label class="form-field__label" for="weight-input">Вес багажа </label>
+    <input
+      class="form-field__input"
+      id="weight-input"
+      type="text"
+      formControlName="weight"
+      required
+    />
+  </div>
+  <button class="form-btn" type="submit" [disabled]="!inputForm.valid">
+    Расчитать
+  </button>
+</form>

@@ -1,0 +1,17 @@
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  &-item {
+    display: flex;
+    padding: 10px;
+
+    &__name {
+      margin: 0;
+      width: 150px;
+    }
+    &__price {
+      margin: 0;
+    }
+  }
+}

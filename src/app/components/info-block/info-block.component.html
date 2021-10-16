@@ -1,0 +1,9 @@
+<div class="info">
+  <p>Предложения</p>
+  <ul class="info-list">
+    <li *ngFor="let list of pricesList" class="info-list-item">
+      <p class="info-list-item__name">{{ list.nameCompany }}</p>
+      <app-info-block-item [tariffList]="list.prises"></app-info-block-item>
+    </li>
+  </ul>
+</div>
